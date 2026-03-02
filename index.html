@@ -52,16 +52,16 @@
 .portada img {
   width: 150px;
   height: auto;
-  display: block; /* Elimina espacio extra debajo */
+  display: block;
 }
 
 .fila1 img {
-  width: 300px; /* Más grande el primer botón */
+  width: 300px;
 }
 
 .fila2 img,
 .fila3 img {
-  width: 200px; /* Más pequeños los otros */
+  width: 200px; 
 }
   
 .fila1 a,
@@ -108,56 +108,55 @@
 
   /* Colocamos cada enlace en su celda */
   .fila1 a:nth-child(1) {
-    grid-column: 1 / -1; /* Ocupa las dos columnas en la primera fila */
+    grid-column: 1 / -1; 
     grid-row: 1;
   }
 
-  .fila2 a:nth-child(1) { /* segundo icono */
+  .fila2 a:nth-child(1) { 
     grid-column: 1;
     grid-row: 2;
   }
-  .fila2 a:nth-child(2) { /* tercer icono */
+  .fila2 a:nth-child(2) { 
     grid-column: 2;
     grid-row: 2;
   }
 
-  .fila2 a:nth-child(3) { /* cuarto icono */
+  .fila2 a:nth-child(3) {
     grid-column: 1;
     grid-row: 3;
   }
-  .fila2 a:nth-child(4) { /* quinto icono */
+  .fila2 a:nth-child(4) { 
     grid-column: 2;
     grid-row: 3;
   }
 
-  .fila3 a:nth-child(1) { /* sexto icono */
+  .fila3 a:nth-child(1) { 
     grid-column: 1;
     grid-row: 4;
   }
-  .fila3 a:nth-child(2) { /* séptimo icono */
+  .fila3 a:nth-child(2) { 
     grid-column: 2;
     grid-row: 4;
   }
 
-  /* Ajustamos tamaños de imagen para que quepan */
   .portada img {
-    width: 100%;  /* Que ocupen el ancho de la celda */
-    max-width: 120px; /* Tamaño máximo para que no se agranden demasiado */
+    width: 100%;  
+    max-width: 120px; 
     height: auto;
   }
 
-  /* Eliminamos márgenes innecesarios */
+  
   .fila1 a, .fila2 a, .fila3 a {
     margin: 0;
     padding: 0;
   }
 
-  /* Ajustamos el margin-top del botón mesa si sigue causando espacio */
+  
   .fila3 a:nth-child(1) img {
     margin-top: 0 !important;
   }
 
-  /* Reemplazo de imágenes mobile (ajusta las rutas) */
+  /* Reemplazo de imágenes mobile */
   .fila1 a:nth-child(1) img {
     content: url("imgs/imgs_mobile/boton-consigna-mobile.png");
   }
