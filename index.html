@@ -84,10 +84,10 @@
     }
 
 
-    /* ====== FONDO PARA TABLET ====== */
+    /* ====== FONDO PARA MOBILE ====== */
     @media (max-width: 1024px) {
       .portada {
-        background-image: url("imgs/imgs_mobile/fondo-mobile.jpg"); /* imagen para tablets */
+        background-image: url("imgs/imgs_mobile/fondo-mobile.jpg"); /* imagen para mobile */
       }
     }
 
@@ -95,28 +95,27 @@
   @media (max-width: 600px) {
 
   .portada {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 2px;
+    padding: 4px;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
   }
 
+  /* Eliminamos estructura de filas para que entren al grid */
   .fila1, .fila2, .fila3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+    display: contents;
   }
 
+  /* Tamaño uniforme */
   .portada img {
     width: 100%;
-    max-width: 130px;
+    max-width: 120px;
     height: auto;
   }
 
-  /* Reemplazo de imágenes mobile */
+  /* Reemplazo imágenes mobile */
   .fila1 img {
     content: url("imgs/imgs_mobile/boton-consigna-mobile.png");
   }
