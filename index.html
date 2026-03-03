@@ -94,41 +94,42 @@
   @media (max-width: 600px) {
 
   .portada {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
   }
 
-  /* Primera fila ocupa las dos columnas */
+  /* Primera fila centrada */
   .fila1 {
-    grid-column: 1 / -1;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
-  /* Las otras filas en dos columnas reales */
+  /* Filas en dos columnas reales */
   .fila2,
   .fila3 {
-    grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
+    width: 100%;
   }
 
+  /* Cada botón ocupa exactamente la mitad */
   .fila2 a,
   .fila3 a {
-    width: 48%;
+    width: calc(50% - 8px);
+    display: flex;
+    justify-content: center;
   }
 
-  .fila1 img {
-    max-width: 160px;
-  }
-
-  .fila2 img,
-  .fila3 img {
+  /* Todos los iconos mismo tamaño */
+  .portada img {
     width: 100%;
+    max-width: 150px;
     height: auto;
   }
 
