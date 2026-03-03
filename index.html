@@ -20,7 +20,7 @@
 
     /* ====== PORTADA PRINCIPAL ====== */
     .portada {
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       background-image: url("imgs/fondo-compu.jpg"); /*imagen de escritorio */
       background-size: cover;
@@ -29,7 +29,6 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      overflow: hidden;
       display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,22 +95,40 @@
 
   .portada {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
-    gap: 2px;
-    padding: 4px;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;
   }
 
-  /* Eliminamos estructura de filas para que entren al grid */
-  .fila1, .fila2, .fila3 {
-    display: contents;
+  /* Primera fila ocupa las dos columnas */
+  .fila1 {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
   }
 
-  /* Tamaño uniforme */
-  .portada img {
+  /* Las otras filas en dos columnas reales */
+  .fila2,
+  .fila3 {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .fila2 a,
+  .fila3 a {
+    width: 48%;
+  }
+
+  .fila1 img {
+    max-width: 160px;
+  }
+
+  .fila2 img,
+  .fila3 img {
     width: 100%;
-    max-width: 120px;
     height: auto;
   }
 
