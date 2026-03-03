@@ -91,7 +91,7 @@
     }
 
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
 
   .portada {
     display: flex;
@@ -101,36 +101,35 @@
     padding: 10px;
   }
 
-  /* Primera fila centrada */
+  /* Primera fila */
   .fila1 {
     display: flex;
     justify-content: center;
     width: 100%;
   }
 
-  /* Filas en dos columnas reales */
+  /* Filas en dos columnas */
   .fila2,
   .fila3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
     width: 100%;
   }
 
   /* Cada botón ocupa exactamente la mitad */
   .fila2 a,
   .fila3 a {
-    width: calc(50% - 8px);
+    width: 50%;
     display: flex;
     justify-content: center;
   }
 
-  /* Todos los iconos mismo tamaño */
+  /* ÍCONOS: ancho fijo real (sin cálculos relativos) */
   .portada img {
-    width: 100%;
-    max-width: 150px;
+    width: 150px;
     height: auto;
+    display: block;
   }
 
   /* Reemplazo imágenes mobile */
@@ -157,6 +156,7 @@
   .fila3 a:nth-child(2) img {
     content: url("imgs/imgs_mobile/boton-material-mobile.png");
   }
+
 }
 
 
